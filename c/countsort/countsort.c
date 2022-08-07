@@ -2,6 +2,7 @@
 
 #include <string.h>
 
+__noinline 
 void count_sort(int arr[], ssize_t size) {
     // Max element of the input array
     int max = find_max(arr, size);
@@ -32,17 +33,10 @@ void count_sort(int arr[], ssize_t size) {
 }
 
 int main(void) {
-    int arr[] = {4, 2, 2, 8, 3, 3, 1};
-    
-    printf("Default array:\n");
-    pr_arr(arr, 7);
-    putchar('\n');
+	int arr[] = {4, 2, 2, 8, 3, 3, 1};
     
     count_sort(arr, 7);
     
-    printf("Sorted array:\n");
-    pr_arr(arr, 7);
-    
-    exit(EXIT_SUCCESS);
+	return 0;
 }
 
